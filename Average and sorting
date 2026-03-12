@@ -25,5 +25,22 @@ public static void sortGrades(double[] grades, String[] names) {
             }
         }
     }
+public static void searchStudent(String[] names, double[] grades, String search){
+        boolean found = false;
+
+        for(int i = 0; i < names.length; i++){
+            if(names[i].equalsIgnoreCase(search)){
+                System.out.println("student found!");
+                System.out.println("Student name: "+ names);
+                System.out.println("Student grades: "+ grades);
+                found = true;
+                break;
+            }
+        }
+        if(!found){
+            System.out.println("invalid");
+        }
+    }
+
 }
 
