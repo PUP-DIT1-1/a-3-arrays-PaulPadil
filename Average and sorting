@@ -1,0 +1,11 @@
+mport java.util.Scanner;
+public class Grade {
+
+    public static double computeAverage(double[] grades){
+        double sum = 0;
+        for(int i = 0; i < grades.length; i++){
+            sum += grades[i];
+        }
+        return sum / grades.length;
+    }
+}
