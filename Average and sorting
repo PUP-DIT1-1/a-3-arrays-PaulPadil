@@ -7,5 +7,23 @@ public class Grade {
             sum += grades[i];
         }
         return sum / grades.length;
+}
+
+public static void sortGrades(double[] grades, String[] names) {
+        for (int i = 0; i < grades.length - 1; i++) {
+            for (int j = i; j < grades.length; j++) {
+                if (grades[i] > grades[j]) {
+
+                    double tempGrade = grades[i];
+                    grades[i] = grades[j];
+                    grades[j] = tempGrade;
+
+                    String tempName = names[i];
+                    names[i] = names[j];
+                    names[j] = tempName;
+                }
+            }
+        }
     }
 }
+
